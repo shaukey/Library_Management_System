@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Library Management System - Dashboard</title>
+
+<th:block th:replace="fragments/styles :: common"></th:block>
+
+</head>
+<body class="nav-md">
+	<div class="container body">
+		<div class="main_container">
+
+			<th:block th:replace="fragments/sidemenu :: menu"></th:block>
+			<th:block th:replace="fragments/topmenu :: menu"></th:block>
+
+			<!-- page content -->
+			<div class="right_col" role="main">
+			
+				<th:block th:replace="fragments/toptiles :: tiles"></th:block>
+				<H1>Book </H1>
+				<button class="btn btn-info btn-lg btn-block" type="button"><a href="/book/add">Add New Book </a></button>
+				<button class="btn btn-info btn-lg btn-block" type="button"><a href="/book/list">Show Books List </a></button>
+				<H1>Member </H1>
+				<button class="btn btn-info btn-lg btn-block" type="button"><a href="/member/add">Add New Member </a></button>
+				<button class="btn btn-info btn-lg btn-block" type="button"><a href="/member/list">Show Members List </a></button>
+				<H1>Category </H1>
+				<button class="btn btn-info btn-lg btn-block" type="button"><a href="/category/add">Add New Category </a></button>
+				<button class="btn btn-info btn-lg btn-block" type="button"><a href="/category/list">Show Categories List </a></button>
+				<H1> Book Issue</H1>
+				<button class="btn btn-info btn-lg btn-block" type="button"><a href="/issue/new">Issue Books </a></button>
+				<button class="btn btn-info btn-lg btn-block" type="button"><a href="/issue/list">Show Issued Books List </a></button>
+				
+			</div>
+			<!-- /page content -->
+
+			<th:block th:replace="fragments/footer :: footer"></th:block>
+
+		</div>
+	</div>
+
+	<th:block th:replace="fragments/scripts :: common"></th:block>
+</body>
+</html>
